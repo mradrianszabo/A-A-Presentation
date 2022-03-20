@@ -1,0 +1,17 @@
+
+<article>
+  <div class="example1">
+    <button (click)="state1 = state1 === 'square' ? 'circle' : 'square'">Transform</button>
+    <div class="object1" [@example1Trigger]="state1"></div>
+  </div>
+
+  <div class="example2">
+    <mat-checkbox #example2Checkbox>Transform</mat-checkbox>
+    <div class="object2" [@example2Trigger]="example2Checkbox.checked"></div>
+  </div>
+
+  <div class="example3">
+    <button (click)="state3 = !state3">{{state3 ? 'Hide' : 'Show'}}</button>
+    <div class="object3" *ngIf="state3" [@example3Trigger]>Hello-Bello!</div>
+  </div>
+</article>
