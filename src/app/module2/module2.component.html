@@ -1,5 +1,16 @@
+<button class="navigate-button" routerLink="/module1">Module1</button>
+<button class="navigate-button" routerLink="/module3">Module3</button>
+
 <article>
-<div class="example1">
+<div class="example example1" style="height: 300px">
+  <h2>Query multiple elements with query(), stagger the starting time of animations with stagger().</h2>
+  <p><b>Used functions:</b> trigger(), style(), transition(), animate(),
+    <span class="highlight">
+      query()
+    </span> ,
+    <span class="highlight">
+      stagger()
+    </span></p>
   <button (click)="example1State = !example1State">{{example1State ? 'Hide' : 'Show'}}</button>
   <ul *ngIf="example1State" [@example1Trigger]>
       <li *ngFor="let item of example1" class="example1ListItem">
@@ -8,17 +19,32 @@
   </ul>
 </div>
 
-  <div class="example2">
+  <div class="example example2">
+    <h2>Group animations with sequence().</h2>
+    <p><b>Used functions:</b> trigger(), style(), transition(), animate(),
+      <span class="highlight">
+        sequence()
+      </span></p>
     <button (click)="example2State = !example2State">{{example2State ? 'Hide' : 'Show'}}</button>
       <div [@example2Trigger] *ngIf="example2State" [@example2Trigger] class="example3Object"></div>
   </div>
 
-  <div class="example3">
+  <div class="example example3">
+    <h2>Group animations with group().</h2>
+    <p><b>Used functions:</b> trigger(), style(), transition(), animate(),
+      <span class="highlight">
+        group()
+      </span></p>
     <button (click)="example3State = !example3State">{{example3State ? 'Hide' : 'Show'}}</button>
     <div *ngIf="example3State" [@example3Trigger] class="example3Object"></div>
   </div>
 
-  <div class="example4">
+  <div class="example example4">
+    <h2>Group animations with keyframes().</h2>
+    <p><b>Used functions:</b> trigger(), state(), style(), transition(), animate(),
+      <span class="highlight">
+        keyframes()
+      </span>></p>
     <button (click)="example4State = !example4State">Transform</button>
     <div [@example4Trigger]="example4State" class="example4Object"></div>
   </div>

@@ -11,7 +11,7 @@ export const MODULE1 ={
     state('circle', style({
       backgroundColor : 'orange',
       borderRadius: '50%',
-      transform: 'translateX(100px)',
+      transform: 'translateX(100%)',
     })),
     transition('square<=>circle', [
       animate('1s ease')

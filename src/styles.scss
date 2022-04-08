@@ -17,3 +17,23 @@ article {
   justify-content: space-between;
   gap: 20px;
 }
+.example {
+  min-height: 250px;
+  width: 400px;
+  overflow: hidden;
+}
+article {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+}
+ul {
+  padding: 0;
+}
+button {
+  width: 100px;
+}
+.highlight {
+  color: rgb(216, 43, 95);
+}

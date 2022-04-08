@@ -13,7 +13,7 @@ import { MODULE2 } from './module2.animations';
   ]
 })
 export class Module2Component implements OnInit {
-  public example1: string[] = ['one', 'two', 'three', 'four', 'five']
+  public example1: string[] = ['one', 'two', 'three', 'four']
   public example1State: boolean = false;
   public example2State: boolean = false;
   public example3State: boolean = false;

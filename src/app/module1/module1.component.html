@@ -1,16 +1,22 @@
-
+<button class="navigateButton" routerLink="/module2">Module2</button>
 <article>
-  <div class="example1">
+  <div class="example example1">
+    <h2>Transition between two states.</h2>
+    <p><b>Used functions:</b> trigger(), state(), style(), transition(), animate()</p>
     <button (click)="state1 = state1 === 'square' ? 'circle' : 'square'">Transform</button>
     <div class="object1" [@example1Trigger]="state1"></div>
   </div>
 
-  <div class="example2">
+  <div class="example example2">
+    <h2>Transition with boolean value.</h2>
+    <p><b>Used functions:</b> trigger(), state(), style(), transition(), animate()</p>
     <mat-checkbox #example2Checkbox>Transform</mat-checkbox>
     <div class="object2" [@example2Trigger]="example2Checkbox.checked"></div>
   </div>
 
-  <div class="example3">
+  <div class="example example3">
+    <h2>Transition with enter and leave (void).</h2>
+    <p><b>Used functions:</b> trigger(), style(), transition(), animate()</p>
     <button (click)="state3 = !state3">{{state3 ? 'Hide' : 'Show'}}</button>
     <div class="object3" *ngIf="state3" [@example3Trigger]>Hello-Bello!</div>
   </div>

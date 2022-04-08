@@ -1,0 +1,40 @@
+<button class="navigateButton" routerLink="/module2">Module2</button>
+<article>
+  <div class="example example1">
+    <h2>Animate parent and its child. Child element use useAnimation()</h2>
+    <p><b>Used functions:</b> trigger(), state(), style(), transition(), animate(), group(), query(),
+      <span class="highlight">
+        animation()
+      </span>,     <span class="highlight">
+        useAnimation()
+      </span>,
+      <span class="highlight">
+        animateChild()
+      </span>,
+  </p>
+    <button (click)="state1 = !state1">Transform</button>
+    <div class="object1" [@example1Trigger]="state1">
+      <div class="object2" [@example2Trigger]="{value: state1, params: {distance: 100}}"></div>
+    </div>
+  </div>
+
+  <div class="example example2">
+    <h2>The animation trigger() function emits a callback when it starts and when it finishes.</h2>
+    <p><b>Used functions:</b> trigger(), state(), style(), transition(), animate()
+      ,
+      <span class="highlight">
+        (@triggerName.start)
+      </span>,
+      <span class="highlight">
+        (@triggerName.done)
+      </span>
+    </p>
+    <button (click)="state2 = !state2">Transform</button>
+    <div class="object2"
+      [@example3Trigger]="state2"
+      (@example3Trigger.start)="state3Toggle()"
+      (@example3Trigger.done)="state3Toggle()"
+    ></div>
+    <p *ngIf="state3">Oh, hi there!</p>
+  </div>
+</article>

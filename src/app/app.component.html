@@ -1,2 +1,5 @@
-<app-module1></app-module1>
-<app-module2></app-module2>
+
+
+<div [@routeAnimations]="getRouteAnimationData(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
