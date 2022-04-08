@@ -11,6 +11,7 @@ import { ModuleComponent } from './module/module.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { Module1Component } from './module1/module1.component';
 import { Module2Component } from './module2/module2.component';
+import { Object1Component } from './module2/object1/object1.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Module2Component } from './module2/module2.component';
     ExampleComponent,
     ModuleComponent,
     Module1Component,
-    Module2Component
+    Module2Component,
+    Object1Component
   ],
   imports: [
     BrowserModule,

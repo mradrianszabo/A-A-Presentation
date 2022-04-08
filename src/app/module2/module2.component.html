@@ -1,0 +1,25 @@
+<article>
+<div class="example1">
+  <button (click)="example1State = !example1State">{{example1State ? 'Hide' : 'Show'}}</button>
+  <ul *ngIf="example1State" [@example1Trigger]>
+      <li *ngFor="let item of example1" class="example1ListItem">
+        {{item}}
+      </li>
+  </ul>
+</div>
+
+  <div class="example2">
+    <button (click)="example2State = !example2State">{{example2State ? 'Hide' : 'Show'}}</button>
+      <div [@example2Trigger] *ngIf="example2State" [@example2Trigger] class="example3Object"></div>
+  </div>
+
+  <div class="example3">
+    <button (click)="example3State = !example3State">{{example3State ? 'Hide' : 'Show'}}</button>
+    <div *ngIf="example3State" [@example3Trigger] class="example3Object"></div>
+  </div>
+
+  <div class="example4">
+    <button (click)="example4State = !example4State">Transform</button>
+    <div [@example4Trigger]="example4State" class="example4Object"></div>
+  </div>
+</article>

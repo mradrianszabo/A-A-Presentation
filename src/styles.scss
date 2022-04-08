@@ -10,3 +10,10 @@ body {
   color: beige;
   background-color: rgb(22, 22, 22);
 }
+article {
+  width: 1000px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 20px;
+}
